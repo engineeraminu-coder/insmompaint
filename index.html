@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSMOM PAINT NIG LTD </title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#F97316;
+  --dark:#0B1120;
+  --card:#111827;
+  --text:#E5E7EB;
+  --soft:#1F2937;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  line-height:1.6;
+  background:linear-gradient(135deg,#0B1120,#111827,#0B1120);
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+  color:#ffffff;
+}
+
+a{text-decoration:none;color:inherit}
+
+/* TOP BAR */
+.top-bar{
+  background:#050A14;
+  color:#fff;
+  padding:10px 0;
+  font-size:14px;
+}
+
+.top-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:0 16px;
+}
+
+/* HEADER */
+header{
+  background:var(--card);
+  border-bottom:1px solid #1f2937;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo img{
+  height:55px;
+}
+
+nav a{
+  margin-left:25px;
+  font-weight:500;
+  color:var(--text);
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+.contact-btn{
+  background:var(--primary);
+  color:#fff;
+  padding:10px 22px;
+  border-radius:30px;
+  margin-left:25px;
+  transition:0.3s ease;
+}
+
+.contact-btn:hover{
+  background:#ea580c;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  background:url('hero.jpg') center/cover no-repeat;
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,0.75), rgba(11,17,32,0.85));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+}
+
+.hero h1{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.hero-buttons a{
+  background:var(--primary);
+  padding:14px 35px;
+  border-radius:30px;
+  font-weight:600;
+  display:inline-block;
+  transition:0.3s ease;
+  box-shadow:0 10px 25px rgba(249,115,22,0.3);
+}
+
+.hero-buttons a:hover{
+  background:#ea580c;
+}
+
+/* GENERAL SECTION */
+section{padding:90px 16px; border-bottom:1px solid rgba(255,255,255,0.05);}
+.container{max-width:1200px;margin:auto}
+
+.title{text-align:center;margin-bottom:60px}
+
+.line{
+  width:70px;
+  height:3px;
+  background:var(--primary);
+  margin:18px auto;
+}
+
+/* ABOUT */
+.about-services{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.about-box{
+  background:var(--card);
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+}
+
+/* TEAM */
+.team{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.team img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.gallery img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+/* FULL IMAGE */
+.full-image{
+  padding:0;
+}
+
+.full-image img{
+  width:100%;
+  display:block;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.service{
+  background:var(--soft);
+  padding:35px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.service:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* CONTACT */
+.contact{
+  background:#050A14;
+  padding:90px 16px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  max-width:800px;
+  margin:40px auto 0;
+}
+
+.contact-grid div{
+  font-size:18px;
+}
+
+.contact-grid a{
+  color:var(--primary);
+}
+
+@media(max-width:600px){
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* FOOTER */
+footer{
+  background:#050A14;
+  color:#9ca3af;
+  padding:40px 16px;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-services{grid-template-columns:1fr}
+  .team,.gallery,.services{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:40px}
+}
+
+@media(max-width:600px){
+  .team,.gallery,.services{grid-template-columns:1fr}
+}
+
+/* CEO Highlight */
+.ceo-highlight {
+  padding:60px 16px;
+  background:var(--card);
+  text-align:center;
+}
+
+.ceo-highlight img {
+  width:100%;
+  max-width:900px;
+  height:auto;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  display:inline-block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+  <div class="top-inner">
+    <div>📞 <a href="tel:07041111188">07041111188</a></div>
+    <div>✉️ <a href="mailto:insmom4biz@gmail.com">insmom4biz@gmail.com</a></div>
+  </div>
+</div>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="contact-btn">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>INSMOM PAINT</h1>
+    <p>Professional • Reliable • Quality Finishing</p>
+
+    <div class="hero-buttons">
+      <a href="https://forms.gle/uWqxSFw72tfiHxPb7" target="_blank">Order Now</a>
+      <a href="#contact">Get In Touch</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="title">
+      <h2>About Us</h2>
+      <div class="line"></div>
+    </div>
+    <div class="about-services">
+      <div class="about-box">
+        <h3>Who We Are</h3>
+        <p>We provide professional interior and exterior painting services delivering beauty, durability and satisfaction.</p>
+      </div>
+      <div class="about-box">
+        <h3>Our Promise</h3>
+        <p>Quality Work • Affordable Pricing • Customer Satisfaction</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ceo-highlight">
+  <div class="container">
+    <img src="ceo.jpeg" alt="CEO of INSMOM Painting">
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Our Team</h2>
+      <div class="line"></div>
+    </div>
+    <div class="team">
+      <img src="company.jpg" alt="">
+      <img src="workers.jpg" alt="">
+      <img src="company copy.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="title">
+      <h2>Gallery</h2>
+      <div class="line"></div>
+    </div>
+    <div class="gallery">
+      <img src="gallery1.jpg" alt="">
+      <img src="gallery2.jpg" alt="">
+      <img src="gallery3.jpg" alt="">
+      <img src="gallery4.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="full-image">
+  <img src="varieties.jpg" alt="">
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="title">
+      <h2>Our Services</h2>
+      <div class="line"></div>
+    </div>
+    <div class="services">
+      <div class="service">GENERAL CONSTRUCTION</div>
+      <div class="service">INTERIOR DECORATION</div>
+      <div class="service">SUPPLY OF GOODS</div>
+      <div class="service">GENERAL PRINTING</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="title">
+      <h2>Contact Us</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <p><strong>📞 Call:</strong><br><a href="tel:08181113040">08181113040</a></p>
+      </div>
+      <div>
+        <p><strong>✉️ Email:</strong><br><a href="mailto:isnmom4biz@gmail.com">isnmom4biz@gmail.com</a></p>
+      </div>
+      <div>
+        <p><strong>💬 WhatsApp:</strong><br><a href="https://wa.me/2348181113040" target="_blank">08181113040</a></p>
+      </div>
+      <div>
+        <p><strong>📸 Instagram:</strong><br><a href="https://www.instagram.com/isnmom_nigeria_ltd" target="_blank">insmom_nigeria_ltd</a></p>
+      </div>
+     <div>
+        <p><strong>🏠 Address:</strong><br>N0 361 & 363 Gurjiya Town Zaria Road Near Amana Estate Kano State</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 INSMOM PAINT. All rights reserved.
+  Built by mky smart operations
+</footer>
+
+</body>
+</html>
